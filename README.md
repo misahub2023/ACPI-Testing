@@ -1,9 +1,10 @@
-# ACPI-Testing
-
-
+# Real Time Automatic Polyp Detection Flutter Application
 
 ## Project Overview
-The Female (FEM) Labeller is a flutter based application which is a simple and user-friendly tool designed for gynecologists to label ultrasound frames efficiently. Its primary objective is to collect medically validated ultrasound data of the female reproductive system to develop AI models for detecting abnormalities. By automating the annotation process in real-time, the application saves time and generates a large, annotated dataset, facilitating the development of robust Artificial Intelligence (AI) models for abnormality classification in both routine and clinical settings.
+The Automatic Colonoscopy Polyp Identification App is an innovative, real-time application designed to assist medical professionals in the detection of colonoscopy polyps using a fine-tuned, interpretable deep learning model based on the VGG-16 architecture. This app aims to address the issue of selection bias in existing colonoscopy datasets by providing a more robust and accurate tool for automatic colonoscopy polyp detection (ACPD). Through its user-friendly interface, healthcare providers can utilize the app to identify colonoscopy frames as polyp or no-polyp.
+
+## ACPI Testing  App
+The [**ACPI Testing metadata**](https://zenodo.org/records/7874340)  has all the metadata related to the work done on Automatic Colonoscopy Polyp Identification. It also contains the APK file for users to download and start utilizing the application.
 
 ## Getting Started
 These instructions will guide you through setting up and running the app on your local machine.
@@ -12,7 +13,6 @@ These instructions will guide you through setting up and running the app on your
 - Flutter SDK: [Installation Guide](https://flutter.dev/docs/get-started/install)
 - Dart SDK: Comes with Flutter
 - Android Studio or Xcode: For running the app on an emulator or physical device
-- Firebase account: For backend services
 
 ### Installation 
 #### (run these commands in the terminal)
@@ -35,24 +35,6 @@ These instructions will guide you through setting up and running the app on your
     flutter pub get
     ```
 
-### Google Sheets Setup
-1. Create a project in Google Cloud and enable the Google Sheets API.
-2. Download the JSON credentials file for a service account and replace the placeholders in the `credentials` field with your actual credentials in `lib/services/sheet.dart`.
-3. Create a new Google Spreadsheet and share it with the service account email (client_email from the `credentials`).
-4. Copy the spreadsheet ID from the URL and replace the placeholder in `spreadsheetId` with your actual spreadsheet ID in `lib/services/sheet.dart`.
-
-### Firebase Setup
-1. Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
-2. Add an Android app to your Firebase project. Download the `google-services.json` file and place it in the `android/app` directory. A sample of the json file is already in the directory.
-3. Add an iOS app to your Firebase project. Download the `GoogleService-Info.plist` file and place it in the `ios/Runner` directory and also update `ios/firebase_app_id_file.json`. A sample of the both the files could be found in the mentioned directory.
-4. Modify the `pubspec.yaml` file to include the necessary Firebase dependencies:
-    ```yaml
-    dependencies:
-      firebase_core: latest_version
-      firebase_auth: latest_version
-      cloud_firestore: latest_version
-    ```
-
 ### Running the App
 1. Connect your device or start an emulator.
 2. Run the app:
@@ -72,6 +54,7 @@ These instructions will guide you through setting up and running the app on your
                 + `res/` (Resource files for the app, one can modify the launch screeen backgroud using multiple options available in this folder)
                     + `drawable-v21/` (Drawable resources for API level 21 and above, one can modify the launch screeen backgroud using multiple options available in this directory)
                         + `launch_background.xml` (Defines the launch screen background for the app)
+                    + `mipmap-hdpi` (stores different versions of application icons and launcher images)
                     + `values-night/` 
                         + `styles.xml` (Defines styles for the app in night mode)
                     + `values/`
@@ -80,12 +63,11 @@ These instructions will guide you through setting up and running the app on your
             + `profile` (Source files for the profile build variant)
                 + `AndroidManifest.xml`
         + `build.gradle` (Build configuration file for the app module, specifying dependencies, plugins, and build settings)
-        + `google-services.json` (Configuration file for Firebase, containing API keys and project identifiers)
     + [gradle/wrapper/](android/gradle/wrapper) (Contains Gradle wrapper files to ensure a specific version of Gradle is used)
         + `gradle-wrapper.properties` (Specifies properties for the Gradle wrapper, such as the Gradle distribution URL)
     + [build.gradle](android/build.gradle) (Top-level build configuration file for the project, specifying project-wide dependencies and build settings)
     + [gradle.properties](android/gradle.properties) (Specifies properties for the Gradle build system, such as JVM options and project properties)
-    + [ultrasound_android.iml](android/ultasound_android.iml) (IntelliJ IDEA module file for the project)
+    + [research_project_android.iml](android/research_project_android.iml) (IntelliJ IDEA module file for the project)
     + `[settings.gradle](android/settings.gradle) (Specifies the Gradle settings for the project, including module names and build configurations)
 
 + ios/
@@ -106,18 +88,13 @@ These instructions will guide you through setting up and running the app on your
             + `LaunchScreen.storyboard.xml` (defines the layout and properties of the app's launch screen)
             + `Main.storyboard.xml` (defines the layout and properties of the app's main interface)
         + `AppDelegate.swift` (This file contains the entry point for the iOS app and handles app lifecycle events)
-        + `GoogleService-Info.plist` (This file contains configuration information for Firebase, including API keys and project identifiers)
         + `Info.plist` (contains configuration settings for the iOS app, such as app permissions, icons, and other metadata)
+        + `Runner-Bridging-Header.h` (used to integrate Swift and Objective-C code)
     + [Podfile](ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
-    + [firebase_app_id_file.json](ios/firebase_app_id_file.json) (This file contains your Firebase project configuration, including your Firebase app ID and other settings)
-+ [assets/](assets) (This folder contains images used in the app) 
++ [assets/](assets) (This folder contains images and weights of VGG16 model used in the app) 
 + lib/
-    + [auth/](lib/auth) (Contains authentication-related screens and logic)
-    + [models/](lib/model) (Data models used across the app)
-    + [screen/](lib/screen) (Contains the primary screens of the app)
-    + [services/](lib/services) (Backend services and API handling)
     + [utils/](lib/utils) (Utility functions and widgets)
-    + [firebase_options.dart](lib/firebase_options.dart) (Configuration file for Firebase initialization and setup)
+    + [home.dart](lib/home.dart) (implements the functionality for selecting and classifying images using the model)
     + [main.dart](lib/main.dart) (The entry point of the Flutter application)
 + test/
     + [widget_test.dart](test/widget_test.dart) (File for testing the widgets of the app)
@@ -131,6 +108,5 @@ These instructions will guide you through setting up and running the app on your
 5. Create a new Pull Request.
 
 ## Credits
-
 
 

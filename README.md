@@ -91,7 +91,7 @@ These instructions will guide you through setting up and running the app on your
         + `Info.plist` (contains configuration settings for the iOS app, such as app permissions, icons, and other metadata)
         + `Runner-Bridging-Header.h` (used to integrate Swift and Objective-C code)
     + [Podfile](ios/Podfile) (This file is used by CocoaPods to manage your app's dependencies)
-+ [assets/](assets) (This folder contains images and weights of VGG16 model used in the app) 
++ [assets/](assets) (This folder contains the labels and weights of VGG16 model used in the app) 
 + lib/
     + [utils/](lib/utils) (Utility functions and widgets)
     + [home.dart](lib/home.dart) (implements the functionality for selecting and classifying images using the model)

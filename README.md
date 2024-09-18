@@ -110,5 +110,5 @@ These instructions will guide you through setting up and running the app on your
 5. Create a new Pull Request.
 
 ## Credits
-This application was developed as a part of the work published in Handa, Palak, Mangotra, Harshita, and Nidhi Goel. "Effect of selection bias on automatic colonoscopy polyp detection." Biomedical Signal Processing and Control 85 (2023): 104915. The idea was developed by Dr. Palak Handa and Dr. Nidhi Goel. It was executed by Ms. Nikita Garg. A seperate test set was also published which can be checked out here https://zenodo.org/records/7874340. 
+This application was developed as a part of the work published in Handa, Palak, Mangotra, Harshita, and Nidhi Goel. "Effect of selection bias on automatic colonoscopy polyp detection." Biomedical Signal Processing and Control 85 (2023): 104915. The idea was developed by Dr. Palak Handa and Dr. Nidhi Goel. It was executed by Ms. Nikita Garg. A seperate test set was also published which can be checked out here https://zenodo.org/records/7874340. Thanks to Ms. Manya Joshi for developing the github repository of the work. 
 

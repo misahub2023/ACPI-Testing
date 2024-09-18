@@ -1,4 +1,4 @@
-#  ACPI Testingl A Real Time Application To Detect Polyps
+#  ACPI Testing: A Real Time Application To Detect Polyps
 
 ## Project Overview
 The Automatic Colonoscopy Polyp Identification App is an innovative, real-time application designed to assist medical professionals in the detection of colonoscopy polyps using a fine-tuned, interpretable deep learning model based on the VGG-16 architecture. This app aims to address the issue of selection bias in existing colonoscopy datasets by providing a more robust and accurate tool for automatic colonoscopy polyp detection (ACPD). Through its user-friendly interface, healthcare providers can utilize the app to identify colonoscopy frames as polyp or no-polyp.

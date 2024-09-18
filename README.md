@@ -1,4 +1,4 @@
-# Real Time Automatic Polyp Detection Flutter Application
+#  ACPI Testingl A Real Time Application To Detect Polyps
 
 ## Project Overview
 The Automatic Colonoscopy Polyp Identification App is an innovative, real-time application designed to assist medical professionals in the detection of colonoscopy polyps using a fine-tuned, interpretable deep learning model based on the VGG-16 architecture. This app aims to address the issue of selection bias in existing colonoscopy datasets by providing a more robust and accurate tool for automatic colonoscopy polyp detection (ACPD). Through its user-friendly interface, healthcare providers can utilize the app to identify colonoscopy frames as polyp or no-polyp.
@@ -110,5 +110,5 @@ These instructions will guide you through setting up and running the app on your
 5. Create a new Pull Request.
 
 ## Credits
-
+This application was developed as a part of the work published in Handa, Palak, Mangotra, Harshita, and Nidhi Goel. "Effect of selection bias on automatic colonoscopy polyp detection." Biomedical Signal Processing and Control 85 (2023): 104915. The idea was developed by Dr. Palak Handa and Dr. Nidhi Goel. It was executed by Ms. Nikita Garg. A seperate test set was also published which can be checked out here https://zenodo.org/records/7874340. 
 

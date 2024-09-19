@@ -51,7 +51,7 @@ These instructions will guide you through setting up and running the app on your
             + `debug/` 
                 + `AndroidManifest.xml` (The manifest file for the debug build variant, specifying application metadata, permissions, and components)
             + `main/` (Source files for the main build variant)
-                + `kotlin/com/example/ultasound/`
+                + `kotlin/com/example/research_project/`
                     + `MainActivity.kt` (The main entry point for the Android application written in Kotlin)
                 + `res/` (Resource files for the app, one can modify the launch screeen backgroud using multiple options available in this folder)
                     + `drawable-v21/` (Drawable resources for API level 21 and above, one can modify the launch screeen backgroud using multiple options available in this directory)
